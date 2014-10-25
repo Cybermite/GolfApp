@@ -77,7 +77,7 @@ class GolfView extends Ui.View {
         dc.drawText( AD_Coords[0], AD_Coords[1], Gfx.FONT_MEDIUM, advanceHole, Gfx.TEXT_JUSTIFY_CENTER);
    		app.setProperty(ADVANCE_COORDS, AD_Coords);
         dc.drawText( ( width *3 ) / 4, height / 2, Gfx.FONT_LARGE, prefix + totalScore, Gfx.TEXT_JUSTIFY_CENTER);
-}
+	}
 
 	//! increments or decremements the score depending on which button is pressed.
 	function updateScore()
@@ -166,6 +166,7 @@ class HoleTracker
 		scoreIndex = 3;
 		var app = App.getApp();
 		app.setProperty(TOTAL_SCORE, 0);
+		app.setProperty(HOLE_NUMBER, 1);
 	}
 
 	function getScoreString(){
