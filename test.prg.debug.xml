@@ -2,16 +2,24 @@
 <debugInfo>
 <pcToLineNum>
 <entry filename="source\\GolfApp.mc" lineNum="16" pc="268435464" symbol="getInitialView"/>
-<entry filename="source\\GolfApp.mc" lineNum="24" pc="268435535" symbol="onMenu"/>
-<entry filename="source\\GolfMenuDelegate.mc" lineNum="7" pc="268435623" symbol="onMenuItem"/>
-<entry filename="source\\GolfMenuDelegate.mc" lineNum="8" pc="268435634" symbol="onMenuItem"/>
-<entry filename="source\\GolfMenuDelegate.mc" lineNum="10" pc="268435669" symbol="onMenuItem"/>
-<entry filename="source\\GolfView.mc" lineNum="10" pc="268435697" symbol="onLayout"/>
-<entry filename="source\\GolfView.mc" lineNum="19" pc="268435746" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="20" pc="268435782" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="21" pc="268435794" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="22" pc="268435845" symbol="onUpdate"/>
-<entry filename="Rez" lineNum="9" pc="268435882" symbol="&lt;init&gt;"/>
+<entry filename="source\\GolfMenuDelegate.mc" lineNum="7" pc="268435539" symbol="onMenuItem"/>
+<entry filename="source\\GolfMenuDelegate.mc" lineNum="8" pc="268435550" symbol="onMenuItem"/>
+<entry filename="source\\GolfMenuDelegate.mc" lineNum="10" pc="268435585" symbol="onMenuItem"/>
+<entry filename="source\\GolfView.mc" lineNum="10" pc="268435613" symbol="onLayout"/>
+<entry filename="source\\GolfView.mc" lineNum="19" pc="268435662" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="20" pc="268435698" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="21" pc="268435710" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="22" pc="268435746" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="23" pc="268435759" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="25" pc="268435772" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="26" pc="268435782" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="28" pc="268435792" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="29" pc="268435802" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="30" pc="268435818" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="31" pc="268435834" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="33" pc="268435850" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="35" pc="268435960" symbol="onUpdate"/>
+<entry filename="Rez" lineNum="9" pc="268435981" symbol="&lt;init&gt;"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="33317" symbol="&lt;gre&gt;"/>
@@ -291,8 +299,8 @@
 <entry id="33315" symbol="&lt;fre&gt;"/>
 <entry id="33046" symbol="KEY_DOWN"/>
 <entry id="32915" symbol="SUB_SPORT_TREADMILL"/>
-<entry id="18" symbol="item_2"/>
-<entry id="17" symbol="item_1"/>
+<entry id="17" symbol="item_2"/>
+<entry id="16" symbol="item_1"/>
 <entry id="33377" symbol="network"/>
 <entry id="32792" symbol="Graphics"/>
 <entry id="33124" symbol="mColor"/>
@@ -302,7 +310,6 @@
 <entry id="33356" symbol="MSG_CODE_EVENT_RX_FAIL"/>
 <entry id="32898" symbol="SPORT_FITNESS_EQUIPMENT"/>
 <entry id="33327" symbol="&lt;spa&gt;"/>
-<entry id="16" symbol="MainMenu"/>
 <entry id="33026" symbol="put"/>
 <entry id="32983" symbol="drawBitmap"/>
 <entry id="32855" symbol="toDegrees"/>

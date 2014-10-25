@@ -18,7 +18,7 @@ class GolfView extends Ui.View {
     function onUpdate(dc) {
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
         dc.clear();
-		dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
+		dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
 		var width = dc.getWidth();
 		var height = dc.getHeight();
 		
@@ -26,17 +26,12 @@ class GolfView extends Ui.View {
 		var topy = height / 8;
 		
 		var toplx = width /8;
-		var toply = (width * 3) / 8;
+		var toply = ( height * 3) / 8;
 		var toprx = ( width * 3 ) / 8;
 		var topry = ( height * 3 ) / 8;
 		
-		var top = new [ 6 ];
-		top[0] = topx;
-		top[1] = topy;
-		top[2] = toplx;
-		top[3] = toply;
-		top[4] = toprx;
-		top[5] = topry;
+		var top = [ [topx, topy], [toplx, toply], [toprx, topry] ];
+		
 		dc.fillPolygon(top);
         //dc.drawText(5, 20, Gfx.FONT_MEDIUM, "Click the menu button", Gfx.TEXT_JUSTIFY_LEFT);
         //dc.drawBitmap(5, 30, image);
