@@ -22,9 +22,11 @@ class GolfView extends Ui.View {
     var initialized;
     var redCoords;
     var greenCoords;
+    var holeTracker;
     
 	function initialize()
 	{
+		holeTracker = new HoleTracker();
 		initialized = false;
 	}
 	
@@ -40,6 +42,11 @@ class GolfView extends Ui.View {
     //! Update the view
     function onUpdate(dc) {
     	// only initilize class variables once
+		updateScore();
+		var app = App.getApp();
+		
+		var scoreString = holeTracker.getScoreString();
+		
     	if(!initialized) {
     		initializeTriangleCoords(dc);
     		initialized = true;
@@ -55,8 +62,24 @@ class GolfView extends Ui.View {
 		dc.fillPolygon(greenCoords);
 		
 		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-        dc.drawText( width / 4, ( 9 * height) / 16, Gfx.FONT_MEDIUM, "PAR", Gfx.TEXT_JUSTIFY_CENTER);
+        dc.drawText( width / 4, ( 9 * height) / 16, Gfx.FONT_MEDIUM, scoreString, Gfx.TEXT_JUSTIFY_CENTER);
     }
+
+	//! increments or decremements the score depending on which button is pressed.
+	function updateScore()
+	{
+		var app = App.getApp();
+		if(app.getProperty(GREEN_BUTTON))
+		{
+			app.setProperty(GREEN_BUTTON, false);
+			holeTracker.incrementScore();
+		}
+		else if(app.getProperty(RED_BUTTON))
+		{
+			app.setProperty(RED_BUTTON, false);
+			holeTracker.decrementScore();
+		}
+	}
 
     //! Called when this View is removed from the screen. Save the
     //! state of your app here.
@@ -110,35 +133,33 @@ class GolfView extends Ui.View {
 	}
 }
 
+
 class HoleTracker
 {
-	var totalScore;
-	var holeScore;
 	var holeNumber;
 	var score;
 	var scoreString;
 	var scoreIndex;
 	
 	function initialize(){
-		totalScore = 0;
-		holeScore = 0;
 		holeNumber = 1;
-		score = [ "ALBATROSS", "EAGLE", "BIRDIE", "PAR", "BOGIE", "DOUBLE", "TRIPLE", "+4", "+5", "+6" ];
+		score = [ "ALBATROSS", "EAGLE", "BIRDIE", "PAR", "BOGIE", "DOUBLE", "TRIPLE" ];
 		scoreIndex = 3;
 		scoreString = score[scoreIndex];
 	}
 
-	
-	function getScoreString(index){
-		var adjustedIndex = index + 3;
-		if(adjustedIndex < 0){
-			return "CHEATER";
+	function getScoreString(){
+		if(scoreIndex < 0){
+			var returnVal = "CHEATER";
+			scoreIndex = 0;
+			return returnVal;
 		}
-		else if(adjustedIndex > 6){
-			return "+" + index;
+		else if(scoreIndex > 6){
+			var returnVal = "+" + (scoreIndex - 3);
+			return returnVal;
 		}
 		else{
-			return score[adjustedIndex];
+			return score[scoreIndex];
 		}
 	}
 	
@@ -146,14 +167,20 @@ class HoleTracker
 		var app = app.getApp();
 		var curHole = app.getProperty(HOLE_NUMBER);
 		app.SetProperty(HOLE_NUMBER, curHole + 1);
-		var curTotal = app.getProperty(TOAL_SCORE);
-		app.SetProperty(TOTAL_SCORE, curTotal + holeScore);
+		var curTotal = app.getProperty(TOTAL_SCORE);
+		app.SetProperty(TOTAL_SCORE, curTotal + getHoleScore());
 	}
 	
-	function incrementScore(index){
-		if(index < 0){
-			holeScore = index;
-		}
+	function getHoleScore(){
+		return scoreIndex - 3;
+	}
+	
+	function incrementScore(){
+		scoreIndex = scoreIndex - 1;
+	}
+	
+	function decrementScore(){
+		scoreIndex = scoreIndex + 1;
 	}
 }
 
@@ -164,18 +191,16 @@ class GolfInputDelegate extends Ui.InputDelegate
 	{
 		var app = App.getApp();
 		var clickedCoords = evt.getCoordinates();
-		Sys.println(clickedCoords.toString());
-		
 		var greenMinMax = app.getProperty(GREEN_MIN_MAX);
 		var redMinMax = app.getProperty(RED_MIN_MAX);
 		
 		if(inBox(greenMinMax, clickedCoords))
 		{
-			app.setProperty(GREEN_BUTTON, 1);
+			app.setProperty(GREEN_BUTTON, true);
 		}
 		else if(inBox(redMinMax, clickedCoords))
 		{
-			app.setProperty(RED_BUTTON, 1);
+			app.setProperty(RED_BUTTON, true);
 		}
 		
         Ui.requestUpdate();
@@ -184,7 +209,6 @@ class GolfInputDelegate extends Ui.InputDelegate
 	//! Returns true if the click coords are within the box coords passed in.
 	function inBox(box, clickedCoords)
 	{
-		Sys.println(box[0]);
 		if(clickedCoords[0] > box[0] && clickedCoords[0] < box[1])
 		{
 			if(clickedCoords[1] > box[2] && clickedCoords[1] < box[3])
