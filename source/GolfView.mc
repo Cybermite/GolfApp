@@ -49,6 +49,7 @@ class GolfView extends Ui.View {
 		var advanceHole = "Advance Hole";
 		var app = App.getApp();
 		var totalScore = holeTracker.getTotalScore();
+		var currentHole = app.getProperty(HOLE_NUMBER);
 		
     	if(!initialized) {
     		initializeTriangleCoords(dc);
@@ -77,6 +78,7 @@ class GolfView extends Ui.View {
         dc.drawText( AD_Coords[0], AD_Coords[1], Gfx.FONT_MEDIUM, advanceHole, Gfx.TEXT_JUSTIFY_CENTER);
    		app.setProperty(ADVANCE_COORDS, AD_Coords);
         dc.drawText( ( width *3 ) / 4, height / 2, Gfx.FONT_LARGE, prefix + totalScore, Gfx.TEXT_JUSTIFY_CENTER);
+		dc.drawText( ( width *3 ) / 4, height / 5, Gfx.FONT_MEDIUM, "Hole: " + currentHole, Gfx.TEXT_JUSTIFY_CENTER);
 	}
 
 	//! increments or decremements the score depending on which button is pressed.
