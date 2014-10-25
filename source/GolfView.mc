@@ -40,6 +40,9 @@ class GolfView extends Ui.View {
 		
 		dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
 		dc.fillPolygon(greenCoords);
+		
+		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+        dc.drawText( width / 4, ( 9 * height) / 16, Gfx.FONT_MEDIUM, "PAR", Gfx.TEXT_JUSTIFY_CENTER);
     }
 
     //! Called when this View is removed from the screen. Save the
@@ -52,23 +55,22 @@ class GolfView extends Ui.View {
 		height = dc.getHeight();
 		
 		var topx = width / 4;
-		var topy = height / 8;
+		var topy = height / 16;
 		
 		var toplx = width /8;
-		var toply = ( height * 3) / 8;
+		var toply = ( height * 4) / 16;
 		var toprx = ( width * 3 ) / 8;
-		var topry = ( height * 3 ) / 8;
+		var topry = ( height * 4 ) / 16;
 		
 		redCoords = [ [topx, topy], [toplx, toply], [toprx, topry] ];
 		
-		var botx = ( width * 3 ) / 4;
-		var boty = ( height * 7 ) / 8;
+		var botx = width / 4;
+		var boty = ( height * 15 ) / 16;
 		
-		var botlx = width /8;
-		var botly = ( height * 7) / 8;
+		var botlx = width / 8;
+		var botly = ( height * 12) / 16;
 		var botrx = ( width * 3 ) / 8;
-		var botry = ( height * 7 ) / 8;
-		
+		var botry = ( height * 12 ) / 16;
 		
 		greenCoords = [ [botx, boty], [botlx, botly], [botrx, botry] ];
     }
