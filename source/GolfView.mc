@@ -11,7 +11,9 @@ enum
 	GREEN_MIN_MAX,
 	RED_MIN_MAX,
 	HOLE_NUMBER,
-	TOTAL_SCORE
+	TOTAL_SCORE,
+	ADVANCE_COORDS,
+	AD_BUTTON
 }
 
 class GolfView extends Ui.View {
@@ -43,9 +45,9 @@ class GolfView extends Ui.View {
     function onUpdate(dc) {
     	// only initilize class variables once
 		updateScore();
-		var app = App.getApp();
-		
 		var scoreString = holeTracker.getScoreString();
+		var advanceHole = "Advance Hole";
+		var app = App.getApp();
 		
     	if(!initialized) {
     		initializeTriangleCoords(dc);
@@ -63,6 +65,11 @@ class GolfView extends Ui.View {
 		
 		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText( width / 4, ( 9 * height) / 16, Gfx.FONT_MEDIUM, scoreString, Gfx.TEXT_JUSTIFY_CENTER);
+        
+        var AD_Coords = [(width * 2.75) /4,  (6 * height) / 7];
+        
+        dc.drawText( AD_Coords[0], AD_Coords[1], Gfx.FONT_MEDIUM, advanceHole, Gfx.TEXT_JUSTIFY_CENTER);
+   		app.setProperty(ADVANCE_COORDS, AD_Coords);
     }
 
 	//! increments or decremements the score depending on which button is pressed.
@@ -78,6 +85,11 @@ class GolfView extends Ui.View {
 		{
 			app.setProperty(RED_BUTTON, false);
 			holeTracker.decrementScore();
+		}
+		else if(app.getProperty(AD_BUTTON))
+		{
+			app.setProperty(AD_BUTTON, false);
+			holeTracker.advanceHole();
 		}
 	}
 
@@ -116,6 +128,7 @@ class GolfView extends Ui.View {
 		var app = App.getApp();
 		app.setProperty(GREEN_MIN_MAX, getGreenMinMax());
 		app.setProperty(RED_MIN_MAX, getRedMinMax());
+		app.setProperty(ADVANCE_COORDS, [(width * 2.75) /4,  (6 * height) / 7]);
     }
 
 	//! Will return an array of [xmin, xmax, ymin, ymax] for the green triangle.
@@ -138,14 +151,12 @@ class HoleTracker
 {
 	var holeNumber;
 	var score;
-	var scoreString;
 	var scoreIndex;
 	
 	function initialize(){
 		holeNumber = 1;
 		score = [ "ALBATROSS", "EAGLE", "BIRDIE", "PAR", "BOGIE", "DOUBLE", "TRIPLE" ];
 		scoreIndex = 3;
-		scoreString = score[scoreIndex];
 	}
 
 	function getScoreString(){
@@ -164,11 +175,12 @@ class HoleTracker
 	}
 	
 	function advanceHole(){
-		var app = app.getApp();
+		var app = App.getApp();
 		var curHole = app.getProperty(HOLE_NUMBER);
-		app.SetProperty(HOLE_NUMBER, curHole + 1);
+		app.setProperty(HOLE_NUMBER, curHole + 1);
 		var curTotal = app.getProperty(TOTAL_SCORE);
-		app.SetProperty(TOTAL_SCORE, curTotal + getHoleScore());
+		app.setProperty(TOTAL_SCORE, curTotal + getHoleScore());
+		scoreIndex = 3;
 	}
 	
 	function getHoleScore(){
@@ -193,6 +205,7 @@ class GolfInputDelegate extends Ui.InputDelegate
 		var clickedCoords = evt.getCoordinates();
 		var greenMinMax = app.getProperty(GREEN_MIN_MAX);
 		var redMinMax = app.getProperty(RED_MIN_MAX);
+		var AD_Coords = app.getProperty(ADVANCE_COORDS);
 		
 		if(inBox(greenMinMax, clickedCoords))
 		{
@@ -201,6 +214,10 @@ class GolfInputDelegate extends Ui.InputDelegate
 		else if(inBox(redMinMax, clickedCoords))
 		{
 			app.setProperty(RED_BUTTON, true);
+		}
+		else if(clickedCoords[0] > AD_Coords[0] && clickedCoords[1] > AD_Coords[1])
+		{
+			app.setProperty(AD_BUTTON, true);
 		}
 		
         Ui.requestUpdate();
