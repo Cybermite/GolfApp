@@ -25,9 +25,9 @@ class GolfView extends Ui.View {
     
 	function initialize()
 	{
-		initialized = false;
+		initialized = false;j
 	}
-
+	
     //! Load your resources here
     function onLayout(dc) {
         image = Ui.loadResource(Rez.Drawables.id_monkey);
@@ -107,6 +107,53 @@ class GolfView extends Ui.View {
 	{
 		var min_max = [redCoords[1][0], redCoords[2][0], redCoords[0][1], redCoords[1][1]];
 		return min_max;
+	}
+}
+
+class HoleTracker
+{
+	var totalScore = 0;
+	var holeScore = 0;
+	var holeNumber = 1;
+	var score = [ "ALBATROSS", "EAGLE", "BIRDIE", "PAR", "BOGIE", "DOUBLE", "TRIPLE", "+4", "+5", "+6" ];
+	var scoreString;
+	var scoreIndex;
+	
+	function initialize(){
+		totalScore = 0;
+		holeScore = 0;
+		holeNumber = 1;
+		score = [ "ALBATROSS", "EAGLE", "BIRDIE", "PAR", "BOGIE", "DOUBLE", "TRIPLE", "+4", "+5", "+6" ];
+		scoreIndex = 3;
+		scoreString = score[scoreIndex];
+	}
+
+	
+	function getScoreString(index){
+		var adjustedIndex = index + 3;
+		if(adjustedIndex < 0){
+			return "CHEATER";
+		}
+		else if(adjustedIndex > 6){
+			return "+" + index;
+		}
+		else{
+			return score[adjustedIndex];
+		}
+	}
+	
+	function advanceHole(){
+		var app = app.getApp();
+		var curHole = app.getProperty(HOLE_NUMBER);
+		app.SetProperty(HOLE_NUMBER, curHole + 1);
+		var curTotal = app.getProperty(TOAL_SCORE);
+		app.SetProperty(TOTAL_SCORE, curTotal + holeScore)
+	}
+	
+	function incrementScore(index){
+		if(index < 0){
+			holeScore = index;
+		}
 	}
 }
 
