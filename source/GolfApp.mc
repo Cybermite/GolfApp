@@ -18,7 +18,7 @@ class GolfApp extends App.AppBase {
 
 }
 
-class Golf2Delegate extends Ui.BehaviorDelegate {
+class GolfDelegate extends Ui.BehaviorDelegate {
 
     function onMenu() {
         Ui.pushView(new Rez.Menus.MainMenu(), new GolfMenuDelegate(), Ui.SLIDE_UP);

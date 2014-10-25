@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <debugInfo>
 <pcToLineNum>
-<entry filename="source\\GolfView.mc" lineNum="10" pc="268435458" symbol="onLayout"/>
-<entry filename="source\\GolfView.mc" lineNum="19" pc="268435507" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="20" pc="268435543" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="21" pc="268435555" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="22" pc="268435606" symbol="onUpdate"/>
-<entry filename="source\\GolfApp.mc" lineNum="16" pc="268435649" symbol="getInitialView"/>
-<entry filename="source\\GolfApp.mc" lineNum="24" pc="268435720" symbol="onMenu"/>
-<entry filename="source\\GolfMenuDelegate.mc" lineNum="7" pc="268435808" symbol="onMenuItem"/>
-<entry filename="source\\GolfMenuDelegate.mc" lineNum="8" pc="268435819" symbol="onMenuItem"/>
-<entry filename="source\\GolfMenuDelegate.mc" lineNum="10" pc="268435854" symbol="onMenuItem"/>
+<entry filename="source\\GolfApp.mc" lineNum="16" pc="268435464" symbol="getInitialView"/>
+<entry filename="source\\GolfApp.mc" lineNum="24" pc="268435535" symbol="onMenu"/>
+<entry filename="source\\GolfMenuDelegate.mc" lineNum="7" pc="268435623" symbol="onMenuItem"/>
+<entry filename="source\\GolfMenuDelegate.mc" lineNum="8" pc="268435634" symbol="onMenuItem"/>
+<entry filename="source\\GolfMenuDelegate.mc" lineNum="10" pc="268435669" symbol="onMenuItem"/>
+<entry filename="source\\GolfView.mc" lineNum="10" pc="268435697" symbol="onLayout"/>
+<entry filename="source\\GolfView.mc" lineNum="19" pc="268435746" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="20" pc="268435782" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="21" pc="268435794" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="22" pc="268435845" symbol="onUpdate"/>
+<entry filename="Rez" lineNum="9" pc="268435882" symbol="&lt;init&gt;"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="33317" symbol="&lt;gre&gt;"/>
@@ -35,6 +36,7 @@
 <entry id="33274" symbol="radians"/>
 <entry id="33218" symbol="testTypeCreation"/>
 <entry id="32916" symbol="SUB_SPORT_STREET"/>
+<entry id="2" module="true" symbol="globals_Rez"/>
 <entry id="33050" symbol="KEY_RIGHT"/>
 <entry id="32964" symbol="COLOR_ORANGE"/>
 <entry id="33424" symbol="testContinue"/>
@@ -42,7 +44,8 @@
 <entry id="32940" symbol="SUB_SPORT_CARDIO_TRAINING"/>
 <entry id="33316" symbol="&lt;deu&gt;"/>
 <entry id="32803" symbol="makeImageRequest"/>
-<entry id="9" symbol="Menus"/>
+<entry id="12" module="true" symbol="Menus"/>
+<entry id="3" module="true" symbol="globals_Rez_Drawables"/>
 <entry id="32775" symbol="Toybox_Position"/>
 <entry id="33312" symbol="&lt;dut&gt;"/>
 <entry id="32805" symbol="getMailbox"/>
@@ -105,7 +108,7 @@
 <entry id="32912" symbol="SPORT_MULTISPORT"/>
 <entry id="32824" symbol="acos"/>
 <entry id="32952" symbol="name"/>
-<entry id="33009" symbol="Drawables"/>
+<entry id="33009" module="true" symbol="Drawables"/>
 <entry id="33056" symbol="ANIM_TYPE_EASE_OUT"/>
 <entry id="33194" symbol="subtract"/>
 <entry id="33297" symbol="second"/>
@@ -157,10 +160,11 @@
 <entry id="33149" symbol="onTap"/>
 <entry id="32997" symbol="Long"/>
 <entry id="33196" symbol="lessThan"/>
-<entry field="true" id="6" symbol="image"/>
+<entry field="true" id="15" symbol="image"/>
 <entry id="33378" symbol="DATA_PAYLOAD_LENGTH"/>
 <entry id="32988" symbol="fillRectangle"/>
 <entry id="32850" symbol="Info"/>
+<entry id="13" module="true" symbol="Layouts"/>
 <entry id="32865" symbol="Stats"/>
 <entry id="32953" symbol="FONT_XTINY"/>
 <entry id="32989" symbol="fillRoundedRectangle"/>
@@ -179,6 +183,7 @@
 <entry id="32787" symbol="Activity"/>
 <entry id="33319" symbol="&lt;hrv&gt;"/>
 <entry id="32825" symbol="asin"/>
+<entry id="5" module="true" symbol="globals_Rez_Fonts"/>
 <entry id="33082" symbol="NUMBER_PICKER_WEIGHT"/>
 <entry id="33287" symbol="november"/>
 <entry id="33283" symbol="july"/>
@@ -197,9 +202,10 @@
 <entry id="32924" symbol="SUB_SPORT_RECUMBENT"/>
 <entry id="33118" method="true" symbol="onUpdate"/>
 <entry id="32891" symbol="heartRate"/>
-<entry id="3" object="true" symbol="GolfApp"/>
+<entry id="8" object="true" symbol="GolfApp"/>
 <entry id="33214" symbol="testLessThan"/>
 <entry id="33409" symbol="transmit"/>
+<entry id="7" module="true" symbol="globals_Rez_Strings"/>
 <entry id="32871" symbol="trap"/>
 <entry id="32879" symbol="usedMemory"/>
 <entry id="32783" symbol="Toybox_Time_Gregorian"/>
@@ -214,7 +220,7 @@
 <entry id="32969" symbol="COLOR_DK_GREEN"/>
 <entry id="32960" symbol="COLOR_DK_GRAY"/>
 <entry id="33398" symbol="sendAcknowledge"/>
-<entry id="5" object="true" symbol="GolfMenuDelegate"/>
+<entry id="10" object="true" symbol="GolfMenuDelegate"/>
 <entry id="32878" symbol="battery"/>
 <entry id="33086" symbol="NumberPicker"/>
 <entry id="33199" symbol="multiply"/>
@@ -285,8 +291,8 @@
 <entry id="33315" symbol="&lt;fre&gt;"/>
 <entry id="33046" symbol="KEY_DOWN"/>
 <entry id="32915" symbol="SUB_SPORT_TREADMILL"/>
-<entry id="12" symbol="item_2"/>
-<entry id="11" symbol="item_1"/>
+<entry id="18" symbol="item_2"/>
+<entry id="17" symbol="item_1"/>
 <entry id="33377" symbol="network"/>
 <entry id="32792" symbol="Graphics"/>
 <entry id="33124" symbol="mColor"/>
@@ -294,10 +300,9 @@
 <entry id="33132" symbol="MAX_SIZE"/>
 <entry id="33189" symbol="month"/>
 <entry id="33356" symbol="MSG_CODE_EVENT_RX_FAIL"/>
-<entry id="4" object="true" symbol="Golf2Delegate"/>
 <entry id="32898" symbol="SPORT_FITNESS_EQUIPMENT"/>
 <entry id="33327" symbol="&lt;spa&gt;"/>
-<entry id="10" symbol="MainMenu"/>
+<entry id="16" symbol="MainMenu"/>
 <entry id="33026" symbol="put"/>
 <entry id="32983" symbol="drawBitmap"/>
 <entry id="32855" symbol="toDegrees"/>
@@ -333,7 +338,7 @@
 <entry id="32813" symbol="mProperties"/>
 <entry id="33396" symbol="close"/>
 <entry id="32868" symbol="getTimer"/>
-<entry id="33010" symbol="Fonts"/>
+<entry id="33010" module="true" symbol="Fonts"/>
 <entry id="33078" symbol="NUMBER_PICKER_DISTANCE"/>
 <entry id="33055" symbol="ANIM_TYPE_EASE_IN"/>
 <entry id="32846" symbol="LOCATION_ONE_SHOT"/>
@@ -348,6 +353,7 @@
 <entry id="33245" symbol="elapsedTime"/>
 <entry id="33395" symbol="open"/>
 <entry id="33138" symbol="identifier"/>
+<entry id="6" module="true" symbol="globals_Rez_Layouts"/>
 <entry id="33358" symbol="MSG_CODE_EVENT_TRANSFER_RX_FAILED"/>
 <entry id="33307" symbol="justification"/>
 <entry id="32923" symbol="SUB_SPORT_DOWNHILL"/>
@@ -374,7 +380,7 @@
 <entry id="33318" symbol="&lt;hun&gt;"/>
 <entry id="33182" symbol="getMonthHash"/>
 <entry id="33044" symbol="KEY_FIND"/>
-<entry id="33007" symbol="Rez"/>
+<entry id="33007" module="true" symbol="Rez"/>
 <entry id="33157" symbol="BEHAVIOR_ON_MENU"/>
 <entry id="33097" symbol="FontResource"/>
 <entry id="33003" symbol="Symbol"/>
@@ -463,7 +469,7 @@
 <entry id="32949" symbol="discard"/>
 <entry id="33311" symbol="&lt;dan&gt;"/>
 <entry id="32904" symbol="SPORT_TRAINING"/>
-<entry id="2" object="true" symbol="GolfView"/>
+<entry id="11" object="true" symbol="GolfView"/>
 <entry id="33249" symbol="currentLocation"/>
 <entry id="33265" symbol="maxCadence"/>
 <entry id="33296" symbol="minute"/>
@@ -504,7 +510,7 @@
 <entry id="33367" symbol="MSG_CODE_EVENT_QUE_OVERFLOW"/>
 <entry id="32896" symbol="SPORT_CYCLING"/>
 <entry id="33049" symbol="KEY_LEFT"/>
-<entry id="8" symbol="GolfDelegate"/>
+<entry id="9" object="true" symbol="GolfDelegate"/>
 <entry id="33258" symbol="totalAscent"/>
 <entry id="32908" symbol="SPORT_SNOWBOARDING"/>
 <entry id="33243" symbol="startLocation"/>
@@ -560,6 +566,7 @@
 <entry id="33173" symbol="now"/>
 <entry id="33018" symbol="invoke"/>
 <entry id="32911" symbol="SPORT_HIKING"/>
+<entry id="4" module="true" symbol="globals_Rez_Menus"/>
 <entry id="33212" symbol="testShiftL"/>
 <entry id="33203" symbol="testSubstringAndFind"/>
 <entry id="32979" symbol="drawEllipse"/>
@@ -585,7 +592,7 @@
 <entry id="32812" symbol="AppBase"/>
 <entry id="33079" symbol="NUMBER_PICKER_TIME"/>
 <entry id="32799" symbol="Timer"/>
-<entry id="33008" symbol="Strings"/>
+<entry id="33008" module="true" symbol="Strings"/>
 <entry id="33109" symbol="height"/>
 <entry id="33135" symbol="mSize"/>
 <entry id="32848" symbol="LOCATION_DISABLE"/>
@@ -611,7 +618,7 @@
 <entry id="32877" symbol="sec"/>
 <entry id="33335" symbol="MSG_ID_RF_EVENT"/>
 <entry id="32995" symbol="mDrawContext"/>
-<entry id="7" symbol="id_monkey"/>
+<entry field="true" id="14" symbol="id_monkey"/>
 <entry id="33117" method="true" symbol="onShow"/>
 <entry id="33404" symbol="searchTimeoutHighPriority"/>
 <entry id="33392" symbol="setPayloadWithOffset"/>
@@ -680,20 +687,6 @@
 <localVars/>
 <annotations/>
 <functions>
-<functionEntry name="onLayout">
-<param id="dc"/>
-<documentation><![CDATA[<div class="description"> Load your resources here<br/></div>]]></documentation>
-</functionEntry>
-<functionEntry name="onShow">
-<documentation><![CDATA[<div class="description"> Restore the state of the app and prepare the view to be shown<br/></div>]]></documentation>
-</functionEntry>
-<functionEntry name="onUpdate">
-<param id="dc"/>
-<documentation><![CDATA[<div class="description"> Update the view<br/></div>]]></documentation>
-</functionEntry>
-<functionEntry name="onHide">
-<documentation><![CDATA[<div class="description"> Called when this View is removed from the screen. Save the<br/> state of your app here.<br/></div>]]></documentation>
-</functionEntry>
 <functionEntry name="onStart">
 <documentation><![CDATA[<div class="description"> onStart() is called on application start up<br/></div>]]></documentation>
 </functionEntry>
@@ -709,6 +702,20 @@
 <functionEntry name="onMenuItem">
 <param id="item"/>
 <documentation/>
+</functionEntry>
+<functionEntry name="onLayout">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Load your resources here<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onShow">
+<documentation><![CDATA[<div class="description"> Restore the state of the app and prepare the view to be shown<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onUpdate">
+<param id="dc"/>
+<documentation><![CDATA[<div class="description"> Update the view<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="onHide">
+<documentation><![CDATA[<div class="description"> Called when this View is removed from the screen. Save the<br/> state of your app here.<br/></div>]]></documentation>
 </functionEntry>
 </functions>
 </debugInfo>
