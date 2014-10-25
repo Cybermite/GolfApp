@@ -25,7 +25,7 @@ class GolfView extends Ui.View {
     
 	function initialize()
 	{
-		initialized = false;j
+		initialized = false;
 	}
 	
     //! Load your resources here
@@ -110,10 +110,10 @@ class GolfView extends Ui.View {
 
 class HoleTracker
 {
-	var totalScore = 0;
-	var holeScore = 0;
-	var holeNumber = 1;
-	var score = [ "ALBATROSS", "EAGLE", "BIRDIE", "PAR", "BOGIE", "DOUBLE", "TRIPLE", "+4", "+5", "+6" ];
+	var totalScore;
+	var holeScore;
+	var holeNumber;
+	var score;
 	var scoreString;
 	var scoreIndex;
 	
@@ -145,7 +145,7 @@ class HoleTracker
 		var curHole = app.getProperty(HOLE_NUMBER);
 		app.SetProperty(HOLE_NUMBER, curHole + 1);
 		var curTotal = app.getProperty(TOAL_SCORE);
-		app.SetProperty(TOTAL_SCORE, curTotal + holeScore)
+		app.SetProperty(TOTAL_SCORE, curTotal + holeScore);
 	}
 	
 	function incrementScore(index){
