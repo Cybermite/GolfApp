@@ -1,6 +1,18 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
+using Toybox.Application as App;
+
+enum 
+{
+	GREEN_BUTTON,
+	RED_BUTTON,
+	ADVANCE_HOLE,
+	GREEN_MIN_MAX,
+	RED_MIN_MAX,
+	HOLE_NUMBER,
+	TOTAL_SCORE
+}
 
 class GolfView extends Ui.View {
 
@@ -11,7 +23,7 @@ class GolfView extends Ui.View {
     var redCoords;
     var greenCoords;
     
-	function initialize(dc)
+	function initialize()
 	{
 		initialized = false;
 	}
@@ -27,6 +39,7 @@ class GolfView extends Ui.View {
 
     //! Update the view
     function onUpdate(dc) {
+    	// only initilize class variables once
     	if(!initialized) {
     		initializeTriangleCoords(dc);
     		initialized = true;
@@ -50,6 +63,7 @@ class GolfView extends Ui.View {
     function onHide() {
     }
     
+    //! Will iniitalize the class variables depending on the device context being used.
     function initializeTriangleCoords(dc){
     	width = dc.getWidth();
 		height = dc.getHeight();
@@ -73,11 +87,24 @@ class GolfView extends Ui.View {
 		var botry = ( height * 12 ) / 16;
 		
 		greenCoords = [ [botx, boty], [botlx, botly], [botrx, botry] ];
+		
+		var app = App.getApp();
+		app.setProperty(GREEN_MIN_MAX, getGreenMinMax());
+		app.setProperty(RED_MIN_MAX, getRedMinMax());
     }
 
-	function getTriangleCoords()
+	//! Will return an array of [xmin, xmax, ymin, ymax] for the green triangle.
+	function getGreenMinMax()
 	{
-		
+		var min_max = [greenCoords[1][0], greenCoords[2][0], greenCoords[1][1], greenCoords[0][1]];
+		return min_max;
+	}
+	
+	//! Will return an array of [xmin, xmax, ymin, ymax] for the red triangle.
+	function getRedMinMax()
+	{
+		var min_max = [redCoords[1][0], redCoords[2][0], redCoords[0][1], redCoords[1][1]];
+		return min_max;
 	}
 }
 
@@ -85,9 +112,40 @@ class GolfInputDelegate extends Ui.InputDelegate
 {
 	function onTap(evt)
 	{
-		var coords = evt.getCoordinates();
-		Sys.println(coords.toString());
+		var app = App.getApp();
+		var clickedCoords = evt.getCoordinates();
+		Sys.println(clickedCoords.toString());
+		
+		var greenMinMax = app.getProperty(GREEN_MIN_MAX);
+		var redMinMax = app.getProperty(RED_MIN_MAX);
+		
+		if(inBox(greenMinMax, clickedCoords))
+		{
+			app.setProperty(GREEN_BUTTON, 1);
+		}
+		else if(inBox(redMinMax, clickedCoords))
+		{
+			app.setProperty(RED_BUTTON, 1);
+		}
+		
+		var stuff = app.getProperty(RED_BUTTON);
+		Sys.println(stuff);
 		
         Ui.requestUpdate();
+	}
+	
+	//! Returns true if the click coords are within the box coords passed in.
+	function inBox(box, clickedCoords)
+	{
+		Sys.println(box[0]);
+		if(clickedCoords[0] > box[0] && clickedCoords[0] < box[1])
+		{
+			if(clickedCoords[1] > box[2] && clickedCoords[1] < box[3])
+			{
+				return true;
+			}
+		}
+		
+		return false;
 	}
 }
