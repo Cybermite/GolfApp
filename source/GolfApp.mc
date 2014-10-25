@@ -1,5 +1,7 @@
 using Toybox.Application as App;
 using Toybox.WatchUi as Ui;
+using Toybox.System as Sys;
+
 
 class GolfApp extends App.AppBase {
 
@@ -13,15 +15,7 @@ class GolfApp extends App.AppBase {
 
     //! Return the initial view of your application here
     function getInitialView() {
-        return [ new GolfView(), new GolfDelegate() ];
-    }
-
-}
-
-class GolfDelegate extends Ui.BehaviorDelegate {
-
-    function onMenu() {
-        //Ui.pushView(new Rez.Menus.MainMenu(), new GolfMenuDelegate(), Ui.SLIDE_UP);
+        return [ new GolfView(), new GolfInputDelegate() ];
     }
 
 }

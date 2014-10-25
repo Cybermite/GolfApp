@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <debugInfo>
 <pcToLineNum>
-<entry filename="source\\GolfApp.mc" lineNum="16" pc="268435464" symbol="getInitialView"/>
-<entry filename="source\\GolfMenuDelegate.mc" lineNum="7" pc="268435539" symbol="onMenuItem"/>
-<entry filename="source\\GolfMenuDelegate.mc" lineNum="8" pc="268435550" symbol="onMenuItem"/>
-<entry filename="source\\GolfMenuDelegate.mc" lineNum="10" pc="268435585" symbol="onMenuItem"/>
-<entry filename="source\\GolfView.mc" lineNum="10" pc="268435613" symbol="onLayout"/>
-<entry filename="source\\GolfView.mc" lineNum="19" pc="268435662" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="20" pc="268435698" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="21" pc="268435710" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="22" pc="268435746" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="23" pc="268435759" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="25" pc="268435772" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="26" pc="268435782" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="28" pc="268435792" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="29" pc="268435802" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="30" pc="268435818" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="31" pc="268435834" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="33" pc="268435850" symbol="onUpdate"/>
-<entry filename="source\\GolfView.mc" lineNum="35" pc="268435960" symbol="onUpdate"/>
-<entry filename="Rez" lineNum="9" pc="268435981" symbol="&lt;init&gt;"/>
+<entry filename="source\\GolfApp.mc" lineNum="18" pc="268435464" symbol="getInitialView"/>
+<entry filename="source\\GolfMenuDelegate.mc" lineNum="7" pc="268435535" symbol="onMenuItem"/>
+<entry filename="source\\GolfMenuDelegate.mc" lineNum="8" pc="268435546" symbol="onMenuItem"/>
+<entry filename="source\\GolfMenuDelegate.mc" lineNum="10" pc="268435581" symbol="onMenuItem"/>
+<entry filename="source\\GolfView.mc" lineNum="16" pc="268435609" symbol="initialize"/>
+<entry filename="source\\GolfView.mc" lineNum="21" pc="268435622" symbol="onLayout"/>
+<entry filename="source\\GolfView.mc" lineNum="30" pc="268435671" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="31" pc="268435683" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="32" pc="268435697" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="35" pc="268435710" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="36" pc="268435746" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="38" pc="268435758" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="39" pc="268435794" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="41" pc="268435814" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="42" pc="268435850" symbol="onUpdate"/>
+<entry filename="source\\GolfView.mc" lineNum="51" pc="268435876" symbol="initializeTriangleCoords"/>
+<entry filename="source\\GolfView.mc" lineNum="52" pc="268435895" symbol="initializeTriangleCoords"/>
+<entry filename="source\\GolfView.mc" lineNum="54" pc="268435914" symbol="initializeTriangleCoords"/>
+<entry filename="source\\GolfView.mc" lineNum="55" pc="268435930" symbol="initializeTriangleCoords"/>
+<entry filename="source\\GolfView.mc" lineNum="57" pc="268435946" symbol="initializeTriangleCoords"/>
+<entry filename="source\\GolfView.mc" lineNum="58" pc="268435962" symbol="initializeTriangleCoords"/>
+<entry filename="source\\GolfView.mc" lineNum="59" pc="268435984" symbol="initializeTriangleCoords"/>
+<entry filename="source\\GolfView.mc" lineNum="60" pc="268436006" symbol="initializeTriangleCoords"/>
+<entry filename="source\\GolfView.mc" lineNum="62" pc="268436028" symbol="initializeTriangleCoords"/>
+<entry filename="source\\GolfView.mc" lineNum="64" pc="268436144" symbol="initializeTriangleCoords"/>
+<entry filename="source\\GolfView.mc" lineNum="65" pc="268436166" symbol="initializeTriangleCoords"/>
+<entry filename="source\\GolfView.mc" lineNum="67" pc="268436188" symbol="initializeTriangleCoords"/>
+<entry filename="source\\GolfView.mc" lineNum="68" pc="268436204" symbol="initializeTriangleCoords"/>
+<entry filename="source\\GolfView.mc" lineNum="69" pc="268436226" symbol="initializeTriangleCoords"/>
+<entry filename="source\\GolfView.mc" lineNum="70" pc="268436248" symbol="initializeTriangleCoords"/>
+<entry filename="source\\GolfView.mc" lineNum="73" pc="268436270" symbol="initializeTriangleCoords"/>
+<entry filename="source\\GolfView.mc" lineNum="86" pc="268436392" symbol="onTap"/>
+<entry filename="source\\GolfView.mc" lineNum="87" pc="268436405" symbol="onTap"/>
+<entry filename="source\\GolfView.mc" lineNum="89" pc="268436432" symbol="onTap"/>
+<entry filename="Rez" lineNum="9" pc="268436471" symbol="&lt;init&gt;"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="33317" symbol="&lt;gre&gt;"/>
@@ -81,6 +97,7 @@
 <entry id="32828" symbol="log"/>
 <entry id="33150" symbol="onHold"/>
 <entry id="33255" symbol="currentPower"/>
+<entry id="19" method="true" symbol="initializeTriangleCoords"/>
 <entry id="32994" symbol="getTextWidthInPixels"/>
 <entry id="33111" symbol="setLocation"/>
 <entry id="33321" symbol="&lt;nob&gt;"/>
@@ -106,6 +123,7 @@
 <entry id="33127" symbol="behavior"/>
 <entry id="33387" symbol="rssi"/>
 <entry id="33129" symbol="mDirection"/>
+<entry id="20" method="true" symbol="getTriangleCoords"/>
 <entry id="33391" symbol="setPayload"/>
 <entry id="32860" symbol="altitude"/>
 <entry id="33339" symbol="MSG_ID_CHANNEL_PERIOD"/>
@@ -113,6 +131,7 @@
 <entry id="33141" symbol="mBitmapData"/>
 <entry id="32897" symbol="SPORT_TRANSITION"/>
 <entry id="32782" symbol="Toybox_Time"/>
+<entry field="true" id="16" symbol="initialized"/>
 <entry id="32912" symbol="SPORT_MULTISPORT"/>
 <entry id="32824" symbol="acos"/>
 <entry id="32952" symbol="name"/>
@@ -165,7 +184,7 @@
 <entry id="32917" symbol="SUB_SPORT_TRAIL"/>
 <entry id="33342" symbol="MSG_ID_NETWORK_KEY"/>
 <entry id="33012" symbol="abs"/>
-<entry id="33149" symbol="onTap"/>
+<entry id="33149" method="true" symbol="onTap"/>
 <entry id="32997" symbol="Long"/>
 <entry id="33196" symbol="lessThan"/>
 <entry field="true" id="15" symbol="image"/>
@@ -182,11 +201,12 @@
 <entry id="33047" symbol="KEY_DOWN_LEFT"/>
 <entry id="33165" symbol="onNextMode"/>
 <entry id="32815" method="true" symbol="onStart"/>
+<entry field="true" id="18" symbol="greenCoords"/>
 <entry id="33376" symbol="channelType"/>
 <entry id="32986" symbol="fillEllipse"/>
 <entry id="33093" symbol="pushView"/>
 <entry id="32863" symbol="when"/>
-<entry id="33163" method="true" symbol="onMenu"/>
+<entry id="33163" symbol="onMenu"/>
 <entry id="32888" symbol="setEnabledSensors"/>
 <entry id="32787" symbol="Activity"/>
 <entry id="33319" symbol="&lt;hrv&gt;"/>
@@ -228,7 +248,7 @@
 <entry id="32969" symbol="COLOR_DK_GREEN"/>
 <entry id="32960" symbol="COLOR_DK_GRAY"/>
 <entry id="33398" symbol="sendAcknowledge"/>
-<entry id="10" object="true" symbol="GolfMenuDelegate"/>
+<entry id="9" object="true" symbol="GolfMenuDelegate"/>
 <entry id="32878" symbol="battery"/>
 <entry id="33086" symbol="NumberPicker"/>
 <entry id="33199" symbol="multiply"/>
@@ -299,8 +319,8 @@
 <entry id="33315" symbol="&lt;fre&gt;"/>
 <entry id="33046" symbol="KEY_DOWN"/>
 <entry id="32915" symbol="SUB_SPORT_TREADMILL"/>
-<entry id="17" symbol="item_2"/>
-<entry id="16" symbol="item_1"/>
+<entry id="22" symbol="item_2"/>
+<entry id="21" symbol="item_1"/>
 <entry id="33377" symbol="network"/>
 <entry id="32792" symbol="Graphics"/>
 <entry id="33124" symbol="mColor"/>
@@ -476,7 +496,7 @@
 <entry id="32949" symbol="discard"/>
 <entry id="33311" symbol="&lt;dan&gt;"/>
 <entry id="32904" symbol="SPORT_TRAINING"/>
-<entry id="11" object="true" symbol="GolfView"/>
+<entry id="10" object="true" symbol="GolfView"/>
 <entry id="33249" symbol="currentLocation"/>
 <entry id="33265" symbol="maxCadence"/>
 <entry id="33296" symbol="minute"/>
@@ -496,7 +516,7 @@
 <entry id="33181" symbol="SECONDS_PER_MINUTE"/>
 <entry id="33281" symbol="may"/>
 <entry id="33419" symbol="DEFAULT_RADIO_FREQUENCY"/>
-<entry id="33108" symbol="width"/>
+<entry field="true" id="33108" symbol="width"/>
 <entry id="33161" symbol="onNextPage"/>
 <entry id="32842" symbol="QUALITY_USABLE"/>
 <entry id="32839" symbol="QUALITY_NOT_AVAILABLE"/>
@@ -517,7 +537,6 @@
 <entry id="33367" symbol="MSG_CODE_EVENT_QUE_OVERFLOW"/>
 <entry id="32896" symbol="SPORT_CYCLING"/>
 <entry id="33049" symbol="KEY_LEFT"/>
-<entry id="9" object="true" symbol="GolfDelegate"/>
 <entry id="33258" symbol="totalAscent"/>
 <entry id="32908" symbol="SPORT_SNOWBOARDING"/>
 <entry id="33243" symbol="startLocation"/>
@@ -557,6 +576,7 @@
 <entry id="33416" symbol="DEFAULT_DEVICE_TYPE"/>
 <entry id="33242" symbol="getActivityInfo"/>
 <entry id="33264" symbol="averageCadence"/>
+<entry field="true" id="17" symbol="redCoords"/>
 <entry id="33237" symbol="timer2"/>
 <entry id="33284" symbol="august"/>
 <entry id="33236" symbol="timer1"/>
@@ -600,7 +620,7 @@
 <entry id="33079" symbol="NUMBER_PICKER_TIME"/>
 <entry id="32799" symbol="Timer"/>
 <entry id="33008" module="true" symbol="Strings"/>
-<entry id="33109" symbol="height"/>
+<entry field="true" id="33109" symbol="height"/>
 <entry id="33135" symbol="mSize"/>
 <entry id="32848" symbol="LOCATION_DISABLE"/>
 <entry id="32963" symbol="COLOR_DK_RED"/>
@@ -657,6 +677,7 @@
 <entry id="33028" symbol="hasKey"/>
 <entry id="33323" symbol="&lt;por&gt;"/>
 <entry id="33083" symbol="NUMBER_PICKER_HEIGHT"/>
+<entry id="11" object="true" symbol="GolfInputDelegate"/>
 <entry id="32810" method="true" symbol="initialize"/>
 <entry id="32837" symbol="GEO_DMS"/>
 <entry id="32887" symbol="SENSOR_TEMPERATURE"/>
@@ -703,11 +724,12 @@
 <functionEntry name="getInitialView">
 <documentation><![CDATA[<div class="description"> Return the initial view of your application here<br/></div>]]></documentation>
 </functionEntry>
-<functionEntry name="onMenu">
-<documentation/>
-</functionEntry>
 <functionEntry name="onMenuItem">
 <param id="item"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="initialize">
+<param id="dc"/>
 <documentation/>
 </functionEntry>
 <functionEntry name="onLayout">
@@ -723,6 +745,17 @@
 </functionEntry>
 <functionEntry name="onHide">
 <documentation><![CDATA[<div class="description"> Called when this View is removed from the screen. Save the<br/> state of your app here.<br/></div>]]></documentation>
+</functionEntry>
+<functionEntry name="initializeTriangleCoords">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="getTriangleCoords">
+<documentation/>
+</functionEntry>
+<functionEntry name="onTap">
+<param id="evt"/>
+<documentation/>
 </functionEntry>
 </functions>
 </debugInfo>
