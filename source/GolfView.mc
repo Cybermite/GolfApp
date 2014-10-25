@@ -68,6 +68,7 @@ class GolfView extends Ui.View {
     	width = dc.getWidth();
 		height = dc.getHeight();
 		
+		// Red button
 		var topx = width / 4;
 		var topy = height / 16;
 		
@@ -78,6 +79,7 @@ class GolfView extends Ui.View {
 		
 		redCoords = [ [topx, topy], [toplx, toply], [toprx, topry] ];
 		
+		// Green button
 		var botx = width / 4;
 		var boty = ( height * 15 ) / 16;
 		
@@ -110,6 +112,7 @@ class GolfView extends Ui.View {
 
 class GolfInputDelegate extends Ui.InputDelegate
 {
+	//! Called whenever the screen is clicked.
 	function onTap(evt)
 	{
 		var app = App.getApp();
@@ -127,9 +130,6 @@ class GolfInputDelegate extends Ui.InputDelegate
 		{
 			app.setProperty(RED_BUTTON, 1);
 		}
-		
-		var stuff = app.getProperty(RED_BUTTON);
-		Sys.println(stuff);
 		
         Ui.requestUpdate();
 	}
