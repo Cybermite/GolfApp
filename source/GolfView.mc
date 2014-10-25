@@ -48,6 +48,7 @@ class GolfView extends Ui.View {
 		var scoreString = holeTracker.getScoreString();
 		var advanceHole = "Advance Hole";
 		var app = App.getApp();
+		var totalScore = holeTracker.getTotalScore();
 		
     	if(!initialized) {
     		initializeTriangleCoords(dc);
@@ -63,6 +64,11 @@ class GolfView extends Ui.View {
 		dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
 		dc.fillPolygon(greenCoords);
 		
+		var prefix = "+";
+		if(totalScore < 0){
+			prefix = "-";
+		}
+		
 		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText( width / 4, ( 9 * height) / 16, Gfx.FONT_MEDIUM, scoreString, Gfx.TEXT_JUSTIFY_CENTER);
         
@@ -70,7 +76,8 @@ class GolfView extends Ui.View {
         
         dc.drawText( AD_Coords[0], AD_Coords[1], Gfx.FONT_MEDIUM, advanceHole, Gfx.TEXT_JUSTIFY_CENTER);
    		app.setProperty(ADVANCE_COORDS, AD_Coords);
-    }
+        dc.drawText( ( width *3 ) / 4, height / 2, Gfx.FONT_LARGE, prefix + totalScore, Gfx.TEXT_JUSTIFY_CENTER);
+}
 
 	//! increments or decremements the score depending on which button is pressed.
 	function updateScore()
@@ -157,6 +164,8 @@ class HoleTracker
 		holeNumber = 1;
 		score = [ "ALBATROSS", "EAGLE", "BIRDIE", "PAR", "BOGIE", "DOUBLE", "TRIPLE" ];
 		scoreIndex = 3;
+		var app = App.getApp();
+		app.setProperty(TOTAL_SCORE, 0);
 	}
 
 	function getScoreString(){
@@ -185,6 +194,11 @@ class HoleTracker
 	
 	function getHoleScore(){
 		return scoreIndex - 3;
+	}
+	
+	function getTotalScore(){
+		var app = App.getApp();
+		return app.getProperty(TOTAL_SCORE);
 	}
 	
 	function incrementScore(){
